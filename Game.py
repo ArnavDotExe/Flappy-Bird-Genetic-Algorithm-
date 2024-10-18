@@ -145,7 +145,7 @@ while not gameExit:
 
 	for x in pipe_collision:
 		if pygame.sprite.collide_rect(bird,x):
-			gameExit = True
+			gameExit = True 
 
 	scoretext = myfont.render("Score {0}".format(score), 1, (0,0,0))
 	gameDisplay.blit(scoretext, (5, 10))

@@ -49,8 +49,8 @@ Inputs :
 game_folder = os.path.dirname(__file__)
 
 master_parameters = [np.zeros(shape=(inp,hidden_nodes)),np.zeros(shape=hidden_nodes+1)]
-master_parameters = np.asarray(master_parameters)  # Will be used to store the best bird and mutate it.
-
+# master_parameters = np.asarray(master_parameters)  # Will be used to store the best bird and mutate it.
+master_parameters = np.array(master_parameters, dtype=object)
 '''
 Genetic Variables
 '''
@@ -187,7 +187,7 @@ def init_para():
     parameter_list = []
     for iii in range(population):
         m_parameters = [np.random.normal(size=(inp,hidden_nodes)),np.random.normal(size=hidden_nodes+1)]
-        m_parameters = np.asarray(m_parameters)
+        m_parameters = np.asarray(m_parameters,dtype=object)
         parameter_list.append(m_parameters)
     return parameter_list
 
